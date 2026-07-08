@@ -1,0 +1,25 @@
+{
+  "name": "James Web Portal",
+  "short_name": "James Web",
+  "description": "Ethical Hacking Guide by AR. Abhinav Ranjan",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#04050f",
+  "theme_color": "#04050f",
+  "icons": [
+    {
+      "src": "./assets/images/logo.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/images/logo.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ],
+  "orientation": "portrait-primary",
+  "categories": ["education", "security"]
+}
