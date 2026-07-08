@@ -1,0 +1,14 @@
+# Redirect old Netlify domain to new primary domain
+https://jamesweblogical.netlify.app/* https://jamesweb.dpdns.org/:splat 301!
+
+# Internal redirects
+/logical /logical/ 301
+/index.html / 301
+
+# PDF asset routes
+/assets/pdf/* /pdf/:splat 200
+/books/* /books/:splat 200
+
+# Ensure HTTPS
+http://jamesweb.dpdns.org/* https://jamesweb.dpdns.org/:splat 301!
+http://jamesweblogical.netlify.app/* https://jamesweb.dpdns.org/:splat 301!
