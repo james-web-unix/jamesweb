@@ -10,7 +10,7 @@
         name: "James Web | Abhinav Ranjan",
         alternateName: "James Web Portal",
         description: "The definitive James Web portal for Ethical Hacking, Cybersecurity education, and Logical thinking.",
-        logo: "assets/images/logo.svg", // Path relative to root
+        logo: "assets/images/icon-512.png", // Path relative to root — PNG required for social/OG previews
         authorUrl: "https://abhinavranjan.netlify.app",
         social: {
             twitter: "@abhinavranjan"
@@ -40,19 +40,28 @@
             document.title = `${pageTitle} | ${branding.name}`;
         }
 
-        // Helper to get or create meta tags
-        const getOrCreateMeta = (attr, value, content) => {
+        // Helper to get or create meta tags. By default this only FILLS IN
+        // a tag when it doesn't already exist (or is empty) — it never
+        // clobbers a page-specific value that's already in the HTML.
+        // Pass force: true for tags that should always reflect this page
+        // (title-derived tags, canonical, url) rather than per-page copy.
+        const getOrCreateMeta = (attr, value, content, force = false) => {
             let el = document.querySelector(`meta[${attr}="${value}"]`);
+            const isNew = !el;
             if (!el) {
                 el = document.createElement('meta');
                 el.setAttribute(attr, value);
                 document.head.appendChild(el);
             }
-            if (content) el.setAttribute('content', content);
+            const hasExistingContent = !isNew && el.getAttribute('content');
+            if (content && (isNew || force || !hasExistingContent)) {
+                el.setAttribute('content', content);
+            }
             return el;
         };
 
-        // Standard Meta Tags
+        // Standard Meta Tags — only fall back to the generic description
+        // if the page didn't already write its own.
         getOrCreateMeta('name', 'description', branding.description);
         getOrCreateMeta('name', 'author', branding.name);
         
@@ -65,20 +74,22 @@
         }
         canonical.setAttribute('href', fullUrl);
 
-        // Open Graph Tags
-        getOrCreateMeta('property', 'og:site_name', branding.name);
+        // Open Graph Tags — site_name/url/type/image are safe to force since
+        // they're the same across pages (or always meant to reflect this
+        // page); title/description are per-page and only filled if missing.
+        getOrCreateMeta('property', 'og:site_name', branding.name, true);
         getOrCreateMeta('property', 'og:title', document.title);
         getOrCreateMeta('property', 'og:description', branding.description);
-        getOrCreateMeta('property', 'og:url', fullUrl);
-        getOrCreateMeta('property', 'og:type', 'website');
-        getOrCreateMeta('property', 'og:image', `${projectRoot}assets/images/logo.svg`);
+        getOrCreateMeta('property', 'og:url', fullUrl, true);
+        getOrCreateMeta('property', 'og:type', 'website', true);
+        getOrCreateMeta('property', 'og:image', `${projectRoot}assets/images/icon-512.png`);
 
         // Twitter Tags
-        getOrCreateMeta('name', 'twitter:card', 'summary_large_image');
+        getOrCreateMeta('name', 'twitter:card', 'summary_large_image', true);
         getOrCreateMeta('name', 'twitter:title', document.title);
         getOrCreateMeta('name', 'twitter:description', branding.description);
-        getOrCreateMeta('name', 'twitter:image', `${projectRoot}assets/images/logo.svg`);
-        getOrCreateMeta('name', 'twitter:creator', branding.social.twitter);
+        getOrCreateMeta('name', 'twitter:image', `${projectRoot}assets/images/icon-512.png`);
+        getOrCreateMeta('name', 'twitter:creator', branding.social.twitter, true);
 
         // 4. Structured Data (JSON-LD)
         const schemaData = {

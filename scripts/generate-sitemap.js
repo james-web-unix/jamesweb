@@ -7,11 +7,12 @@ const fs = require('fs');
 const path = require('path');
 
 // Base configuration
-const BASE_URL = 'https://jamesweb.dpdns.org'; // Change to your actual domain
+const BASE_URL = 'https://jamesweb.dpdns.org'; // Must match canonical URLs used across the site
 const ROOT_DIR = path.resolve(__dirname, '..');
 
 // Files to exclude
-const EXCLUDE = ['node_modules', '.git', 'assets', 'scripts', '403.html', '404.html'];
+const EXCLUDE = ['node_modules', '.git', 'assets', 'scripts', 'books-library',
+  '403.html', '404.html', '500.html', 'offline.html', 'googleaf52be9848c76625.html'];
 
 function walkDir(dir, fileList = []) {
     const files = fs.readdirSync(dir);
@@ -23,7 +24,13 @@ function walkDir(dir, fileList = []) {
         } else {
             if (file.endsWith('.html') && !EXCLUDE.includes(file)) {
                 let relativePath = path.relative(ROOT_DIR, filePath).replace(/\\/g, '/');
-                if (relativePath === 'index.html') relativePath = '';
+                if (relativePath === 'index.html') {
+                    relativePath = '';
+                } else if (relativePath.endsWith('/index.html')) {
+                    // Match the clean, trailing-slash canonical URLs used
+                    // across the site (e.g. /logical/, not /logical/index.html)
+                    relativePath = relativePath.slice(0, -'index.html'.length);
+                }
                 fileList.push(relativePath);
             }
         }

@@ -23,18 +23,23 @@
   status = 301
 
 [[redirects]]
+  from = "/learning"
+  to = "/learning/"
+  status = 301
+
+[[redirects]]
   from = "/index.html"
   to = "/"
   status = 301
 
 [[redirects]]
-  from = "/assets/pdf/*"
-  to = "/pdf/:splat"
+  from = "/books/*"
+  to = "/books-library/:splat"
   status = 200
 
 [[redirects]]
-  from = "/books/*"
-  to = "/books/:splat"
+  from = "/assets/pdf/*"
+  to = "/books-library/:splat"
   status = 200
 
 # Headers for SEO & Performance
@@ -65,6 +70,12 @@
   [headers.values]
     Content-Type = "application/javascript"
     Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Content-Type = "application/javascript"
+    Cache-Control = "no-cache"
 
 [[headers]]
   for = "*.css"

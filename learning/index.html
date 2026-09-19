@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Portal — All Courses | James Web</title>
+
+  <meta name="description" content="Browse every course in the James Series learning portal, starting with James Web Logical — a complete guide to ethical hacking, tools, security and logical thinking. New courses are added regularly.">
+  <meta name="keywords" content="James Web learning portal, ethical hacking courses, cybersecurity courses, James Web Logical, AR Abhinav Ranjan">
+  <meta name="author" content="AR. Abhinav Ranjan">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://jamesweb.dpdns.org/learning/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Learning Portal — All Courses | James Web">
+  <meta property="og:description" content="Browse every course in the James Series learning portal, starting with James Web Logical. New courses are added regularly.">
+  <meta property="og:site_name" content="James Web Portal">
+  <meta property="og:url" content="https://jamesweb.dpdns.org/learning/">
+  <meta property="og:image" content="https://jamesweb.dpdns.org/assets/images/icon-512.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Learning Portal — All Courses | James Web">
+  <meta name="twitter:description" content="Browse every course in the James Series learning portal, starting with James Web Logical. New courses are added regularly.">
+  <meta name="twitter:image" content="https://jamesweb.dpdns.org/assets/images/icon-512.png">
+
+  <!-- AEO: Structured Data — this list is rendered from COURSES[] below,
+       so keep this ItemList in sync whenever a course is added. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "James Web", "item": "https://jamesweb.dpdns.org/" },
+          { "@type": "ListItem", "position": 2, "name": "Learning Portal", "item": "https://jamesweb.dpdns.org/learning/" }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "name": "James Web Learning Portal — Courses",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "James Web Logical",
+            "url": "https://jamesweb.dpdns.org/logical/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <meta name="geo.region" content="IN-BR">
+  <meta name="geo.placename" content="Muzaffarpur, Bihar, India">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="../manifest.json">
+  <script src="../assets/js/seo-engine.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg: #04050f;
+      --accent: #3b82f6;
+      --accent-glow: rgba(59, 130, 246, 0.4);
+      --purple: #8b5cf6;
+      --purple-glow: rgba(139, 92, 246, 0.3);
+      --text: #ffffff;
+      --text-muted: #a0a0b0;
+      --text-dim: #6b7280;
+      --glass: rgba(255, 255, 255, 0.03);
+      --glass-strong: rgba(255, 255, 255, 0.06);
+      --border: rgba(255, 255, 255, 0.08);
+      --border-bright: rgba(255, 255, 255, 0.15);
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
+      --transition: all 0.35s var(--ease);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: var(--bg); color: var(--text);
+      font-family: 'Inter', -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: rgba(59,130,246,0.3); border-radius: 3px; }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+    @keyframes gridDrift { 0% { background-position: 0 0; } 100% { background-position: 60px 60px; } }
+
+    .bg-grid {
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background-image:
+        linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      animation: gridDrift 30s linear infinite;
+    }
+
+    header.top-bar {
+      position: relative; z-index: 2;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 24px; max-width: 1100px; margin: 0 auto;
+    }
+    .back-link {
+      display: flex; align-items: center; gap: 8px;
+      color: var(--text-muted); text-decoration: none; font-size: 0.9rem;
+      transition: var(--transition);
+    }
+    .back-link:hover { color: var(--text); transform: translateX(-3px); }
+    .top-bar .nav-cta {
+      background: linear-gradient(135deg, var(--accent), var(--purple));
+      color: #fff; font-weight: 800; font-size: 0.78rem; letter-spacing: 1px;
+      padding: 10px 22px; border-radius: 100px; text-decoration: none;
+    }
+
+    main {
+      position: relative; z-index: 1;
+      padding: 24px 24px 100px; max-width: 1100px; margin: 0 auto;
+    }
+    .hub-header { text-align: center; max-width: 680px; margin: 24px auto 48px; animation: fadeIn 0.6s var(--ease) both; }
+    .hub-header img { width: 56px; margin-bottom: 16px; filter: drop-shadow(0 0 20px var(--accent-glow)); }
+    .hub-header h1 {
+      font-size: clamp(2rem, 6vw, 3rem); font-weight: 900; letter-spacing: -1.5px;
+      background: linear-gradient(to bottom, #fff, #888);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      margin-bottom: 12px;
+    }
+    .hub-header p { color: var(--text-muted); font-size: 1rem; line-height: 1.6; }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 28px;
+    }
+
+    .course-card {
+      background: var(--glass); border: 1px solid var(--border); border-radius: 22px;
+      padding: 32px 28px; text-decoration: none; color: var(--text);
+      display: flex; flex-direction: column; gap: 16px;
+      transition: var(--transition); position: relative; overflow: hidden;
+      animation: fadeIn 0.5s var(--ease) both;
+    }
+    .course-card:hover {
+      transform: translateY(-8px); border-color: var(--accent);
+      background: rgba(59,130,246,0.06); box-shadow: 0 30px 60px rgba(0,0,0,0.55);
+    }
+    .course-icon {
+      width: 56px; height: 56px; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem; box-shadow: 0 10px 24px rgba(0,0,0,0.4);
+    }
+    .course-card h3 { font-size: 1.2rem; font-weight: 800; letter-spacing: -0.3px; }
+    .course-card .course-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; flex-grow: 1; }
+    .course-meta {
+      display: flex; align-items: center; justify-content: space-between;
+      font-family: 'JetBrains Mono', monospace; font-size: 0.72rem;
+      color: var(--text-dim); letter-spacing: 0.5px;
+    }
+    .course-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+    .course-tag {
+      font-size: 0.65rem; padding: 3px 10px; border-radius: 100px;
+      border: 1px solid var(--border-bright); color: var(--text-dim);
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .course-cta {
+      align-self: flex-start; margin-top: 4px;
+      color: var(--accent-bright, #60a5fa); font-size: 0.82rem; font-weight: 700;
+    }
+    .course-card:hover .course-cta { text-decoration: underline; }
+
+    .course-card-add {
+      background: transparent; border: 2px dashed var(--border-bright); border-radius: 22px;
+      padding: 32px 28px; display: flex; flex-direction: column; align-items: center;
+      justify-content: center; gap: 14px; text-align: center; min-height: 220px;
+      transition: var(--transition);
+    }
+    .course-card-add:hover { border-color: var(--accent); }
+    .course-card-add i { font-size: 2.2rem; color: var(--text-dim); }
+    .course-card-add p { font-size: 0.82rem; color: var(--text-dim); max-width: 220px; line-height: 1.5; }
+
+    #empty-state { text-align: center; color: var(--text-dim); padding: 60px 0; display: none; }
+  </style>
+</head>
+<body>
+
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <header class="top-bar">
+    <a href="../index.html" class="back-link">
+      <i class="fa-solid fa-arrow-left"></i> Home
+    </a>
+    <a href="../reader/index.html" class="nav-cta">Open Reader</a>
+  </header>
+
+  <main>
+    <div class="hub-header">
+      <img src="../assets/images/logo.svg" alt="James Web logo">
+      <h1>Learning Portal</h1>
+      <p>Every course in the James Series, in one place. Pick a course below to see its chapters, FAQs and how to start reading — new courses are added here as they launch.</p>
+    </div>
+
+    <div class="course-grid" id="course-grid" role="list"></div>
+    <p id="empty-state">No courses match your search.</p>
+  </main>
+
+  <script>
+    // ════════════════════════════════════════════════════════════
+    //  COURSES — this is the single source of truth for the
+    //  Learning Portal grid. To add a new course, just add another
+    //  object to this array; the page renders itself from this data,
+    //  no other HTML edits needed.
+    // ════════════════════════════════════════════════════════════
+    const COURSES = [
+      {
+        key: 'logical',
+        title: 'James Web Logical',
+        desc: 'A complete guide to ethical hacking, tools, security and logical thinking — Kali Linux, Nmap, XSS and legal lab practice.',
+        icon: 'fa-terminal',
+        gradient: 'linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%)',
+        tags: ['Ethical Hacking', 'Kali Linux', 'Beginner'],
+        pages: 24,
+        href: '../logical/index.html'
+      }
+      // ← Add more courses here as new books/courses launch.
+    ];
+
+    function renderCourses() {
+      const grid = document.getElementById('course-grid');
+      const empty = document.getElementById('empty-state');
+      grid.innerHTML = '';
+
+      if (!COURSES.length) {
+        empty.style.display = 'block';
+      } else {
+        empty.style.display = 'none';
+        COURSES.forEach((course, i) => {
+          const card = document.createElement('a');
+          card.className = 'course-card';
+          card.href = course.href;
+          card.setAttribute('role', 'listitem');
+          card.style.animationDelay = `${i * 0.06}s`;
+          card.innerHTML = `
+            <div class="course-icon" style="background:${course.gradient}">
+              <i class="fa-solid ${course.icon}"></i>
+            </div>
+            <h3>${course.title}</h3>
+            <p class="course-desc">${course.desc}</p>
+            <div class="course-tags">
+              ${course.tags.map(t => `<span class="course-tag">${t}</span>`).join('')}
+            </div>
+            <div class="course-meta">
+              <span>${course.pages} pages</span>
+              <span class="course-cta">View course →</span>
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+      }
+
+      // "More courses coming soon" placeholder card
+      const addCard = document.createElement('div');
+      addCard.className = 'course-card-add';
+      addCard.innerHTML = `
+        <i class="fa-solid fa-book-medical"></i>
+        <p>More courses are on the way. Check back soon.</p>
+      `;
+      grid.appendChild(addCard);
+    }
+
+    renderCourses();
+  </script>
+</body>
+</html>

@@ -11,13 +11,13 @@
 
   <!-- Favicon & PWA -->
   <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
-  <link rel="apple-touch-icon" href="assets/images/logo.svg">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
   <link rel="manifest" href="manifest.json">
 
-  <title>James Web Portal | Ethical Hacking & Logic by Abhinav Ranjan</title>
+  <title>James Web Portal — Ethical Hacking & Cybersecurity Guide</title>
 
   <!-- SEO / AEO / GEO META -->
-  <meta name="description" content="The definitive entry point to the James Web ecosystem. Explore high-performance education in ethical hacking, network security, and digital logic. Written by AR. Abhinav Ranjan.">
+  <meta name="description" content="Explore the James Web ecosystem: free courses in ethical hacking, network security, and digital logic, written by AR. Abhinav Ranjan.">
   <meta name="keywords" content="ethical hacking, cybersecurity, James Web, Abhinav Ranjan, Luminary Technicals, network security, digital logic">
   <meta name="author" content="AR. Abhinav Ranjan">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -30,14 +30,14 @@
   <meta property="og:description" content="Master ethical hacking and cybersecurity with structured guides and tools from the James Series ecosystem.">
   <meta property="og:site_name" content="James Web Portal">
   <meta property="og:url" content="https://jamesweb.dpdns.org/">
-  <meta property="og:image" content="https://jamesweb.dpdns.org/assets/images/logo.svg">
+  <meta property="og:image" content="https://jamesweb.dpdns.org/assets/images/icon-512.png">
   <meta property="og:locale" content="en_IN">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="James Web Portal — Ethical Hacking & Logic">
   <meta name="twitter:description" content="Master ethical hacking and cybersecurity with structured guides and tools from the James Series ecosystem.">
-  <meta name="twitter:image" content="https://jamesweb.dpdns.org/assets/images/logo.svg">
+  <meta name="twitter:image" content="https://jamesweb.dpdns.org/assets/images/icon-512.png">
   <meta name="twitter:creator" content="@abhinavranjan">
 
   <!-- AEO: Structured Data (JSON-LD) -->
@@ -50,8 +50,10 @@
         "@id": "https://jamesweb.dpdns.org/#website",
         "url": "https://jamesweb.dpdns.org/",
         "name": "James Web Portal",
-        "alternateName": ["James Web", "James Web Series"],
+        "alternateName": ["James Web", "James Web Series", "James Web Logical"],
         "description": "Digital Ecosystem for Ethical Hacking & Logic",
+        "disambiguatingDescription": "James Web is an independent cybersecurity and ethical hacking education platform founded by AR. Abhinav Ranjan. It is not affiliated with NASA, ESA, CSA, or the James Webb Space Telescope (JWST).",
+        "inLanguage": "en-IN",
         "publisher": { "@id": "https://jamesweb.dpdns.org/#person" }
       },
       {
@@ -59,9 +61,48 @@
         "@id": "https://jamesweb.dpdns.org/#person",
         "name": "AR. Abhinav Ranjan",
         "url": "https://abhinavranjan.netlify.app",
+        "image": "https://abhinavranjan.qzz.io/images/profile.png",
         "jobTitle": "Cybersecurity Educator & Founder",
-        "worksFor": { "@type": "Organization", "name": "Luminary Technicals" },
+        "worksFor": { "@id": "https://jamesweb.dpdns.org/#organization" },
+        "sameAs": ["https://twitter.com/abhinavranjan"],
         "description": "Founder of Luminary Technicals, recognized as one of the youngest authorities in ethical hacking and digital security instruction."
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://jamesweb.dpdns.org/#organization",
+        "name": "Luminary Technicals",
+        "url": "https://luminarytechnicals.dpdns.org",
+        "logo": "https://jamesweb.dpdns.org/assets/images/icon-512.png"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://jamesweb.dpdns.org/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is James Web?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "James Web is an independent education portal by AR. Abhinav Ranjan, part of the Luminary Technicals ecosystem, focused on ethical hacking, cybersecurity and digital logic — publishing free courses and reading material like James Web Logical."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is James Web related to the James Webb Space Telescope?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. James Web is not affiliated with NASA, ESA, CSA, or the James Webb Space Telescope (JWST) in any way. The similar name is a coincidence — James Web is a cybersecurity and ethical hacking education brand founded by AR. Abhinav Ranjan."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who runs James Web?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "James Web is built and maintained by AR. Abhinav Ranjan, founder of Luminary Technicals, as part of a wider ecosystem of educational and technical projects."
+            }
+          }
+        ]
       }
     ]
   }
@@ -525,6 +566,7 @@
       width: 140px;
       height: 140px;
       border-radius: 50%;
+      overflow: hidden;
       border: 2px solid var(--border-bright);
       padding: 6px;
       flex-shrink: 0;
@@ -557,6 +599,60 @@
     }
 
     .owner-link:hover { color: var(--text); transform: translateX(4px); }
+
+    /* FAQ Section */
+    .faq-section {
+      padding: 100px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-list {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .faq-item {
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      transition: var(--transition);
+    }
+
+    .faq-item:hover { border-color: var(--border-bright); }
+
+    .faq-item summary {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1.02rem;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .faq-item summary::-webkit-details-marker { display: none; }
+
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--text-muted);
+      transition: var(--transition);
+      margin-left: 16px;
+    }
+
+    .faq-item[open] summary::after { content: '−'; }
+
+    .faq-item p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-top: 14px;
+    }
 
     /* Publisher Bar */
     .publisher-footer {
@@ -639,7 +735,7 @@
       </a>
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#books">Books</a>
-        <a href="logical/index.html">Learning</a>
+        <a href="learning/index.html">Learning</a>
         <a href="reader/index.html">Reader</a>
         <a href="#owner">About</a>
       </nav>
@@ -654,7 +750,7 @@
   <!-- Mobile Nav Drawer -->
   <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
     <a href="#books" onclick="closeMobileNav()">📚 Books</a>
-    <a href="logical/index.html" onclick="closeMobileNav()">🛡️ Learning Portal</a>
+    <a href="learning/index.html" onclick="closeMobileNav()">🛡️ Learning Portal</a>
     <a href="reader/index.html" onclick="closeMobileNav()">📖 Immersive Reader</a>
     <a href="#owner" onclick="closeMobileNav()">👤 About</a>
   </nav>
@@ -674,7 +770,7 @@
 
       <!-- Portal Entry Points -->
       <section class="portal-grid">
-        <a href="logical/index.html" class="portal-card" data-reveal>
+        <a href="learning/index.html" class="portal-card" data-reveal>
           <div class="card-icon">🛡️</div>
           <h3>Learning Portal</h3>
           <p>Master ethical hacking with structured labs, ethics-first workflows, and practical tools.</p>
@@ -706,7 +802,7 @@
 
         <div class="publisher-footer" data-reveal>
           <span>Published by <strong>Luminary Books</strong></span>
-          <a href="https://luminarytechnicals.netlify.app">Visit Luminary Technicals →</a>
+          <a href="https://luminarytechnicals.dpdns.org">Visit Luminary Technicals →</a>
         </div>
       </section>
 
@@ -714,22 +810,41 @@
       <section id="owner" class="owner-section">
         <div class="owner-mini-card" data-reveal>
           <div class="owner-avatar">
-            <img src="https://luminarytechnicals.netlify.app/assets/images/abhinavranjan-owner.png" alt="Abhinav Ranjan" loading="lazy">
+            <img src="https://abhinavranjan.qzz.io/images/profile.png" alt="Abhinav Ranjan" loading="lazy" onerror="this.onerror=null;this.src='assets/images/logo.svg';this.style.objectFit='contain';this.style.padding='20px';">
           </div>
           <div class="owner-info">
             <h3>Meet the Creator</h3>
             <p>AR. Abhinav Ranjan is a cybersecurity educator and founder of Luminary Technicals. He is dedicated to building secure digital infrastructure and empowering the next generation of tech enthusiasts.</p>
             <div class="owner-links">
               <a href="https://abhinavranjan.netlify.app" class="owner-link">Personal Website →</a>
-              <a href="https://luminarytechnicals.netlify.app" class="owner-link">Luminary Technicals →</a>
+              <a href="https://luminarytechnicals.dpdns.org" class="owner-link">Luminary Technicals →</a>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="faq" class="faq-section" aria-labelledby="faq-heading">
+        <h2 id="faq-heading" class="section-title" data-reveal>Frequently Asked</h2>
+        <div class="faq-list" data-reveal>
+          <details class="faq-item">
+            <summary>What is James Web?</summary>
+            <p>James Web is an independent education portal by AR. Abhinav Ranjan, part of the Luminary Technicals ecosystem, focused on ethical hacking, cybersecurity and digital logic — published free courses and reading material like James Web Logical.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is James Web related to the James Webb Space Telescope?</summary>
+            <p>No. James Web is not affiliated with NASA, ESA, CSA, or the James Webb Space Telescope (JWST) in any way. The similar name is a coincidence — James Web is a cybersecurity and ethical hacking education brand founded by AR. Abhinav Ranjan.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Who runs James Web?</summary>
+            <p>James Web is built and maintained by AR. Abhinav Ranjan, founder of Luminary Technicals, as part of a wider ecosystem of educational and technical projects.</p>
+          </details>
         </div>
       </section>
     </main>
 
     <footer>
-      <p>© 2026 <strong style="color: var(--text);">James Web Portal</strong> · Built by AR. Abhinav Ranjan · <a href="https://luminarytechnicals.netlify.app" style="color: var(--blue); text-decoration: none;">Luminary Technicals</a></p>
+      <p>© 2026 <strong style="color: var(--text);">James Web Portal</strong> · Built by AR. Abhinav Ranjan · <a href="https://luminarytechnicals.dpdns.org" style="color: var(--blue); text-decoration: none;">Luminary Technicals</a></p>
+      <p style="margin-top: 8px; font-size: 0.78rem; color: var(--text-dim, #6b7280);">James Web is an independent cybersecurity education project and is not affiliated with NASA's James Webb Space Telescope.</p>
     </footer>
   </div>
 

@@ -1,14 +1,18 @@
-const CACHE_NAME = 'james-web-cache-v3';
+const CACHE_NAME = 'james-web-cache-v8';
 const OFFLINE_URL = '/offline.html';
 
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
   '/logical/index.html',
+  '/learning/index.html',
   '/reader/index.html',
   '/assets/js/seo-engine.js',
   '/assets/css/service-pages.css',
   '/assets/images/logo.svg',
+  '/assets/images/icon-192.png',
+  '/assets/images/icon-512.png',
+  '/assets/images/apple-touch-icon.png',
   '/manifest.json',
   '/offline.html',
   '/404.html',

@@ -6,7 +6,7 @@
 
 class PDFManager {
   constructor(options = {}) {
-    this.basePath = options.basePath || '/books/';
+    this.basePath = options.basePath || '/books-library/';
     this.cacheKey = 'jamesweb_pdf_cache';
     this.books = new Map();
     this.init();
@@ -18,7 +18,8 @@ class PDFManager {
   init() {
     this.registerBooks();
     this.setupEventListeners();
-    this.loadCachedMetadata();
+    // Note: no server/API backing this static site, so there is no
+    // remote metadata to refresh — books are registered locally above.
   }
 
   /**
@@ -31,8 +32,8 @@ class PDFManager {
         title: 'James Web Logical',
         subtitle: 'Complete Guide to Ethical Hacking',
         author: 'AR. Abhinav Ranjan',
-        filename: 'james-web-logical.pdf',
-        pages: 24, // CORRECTED from 100+ to actual 24 pages
+        filename: 'logical.pdf',
+        pages: 24,
         size: '4.8 MB',
         published: '2026-05-01',
         version: '1.0',
@@ -40,8 +41,8 @@ class PDFManager {
         description: 'A comprehensive 24-page guide to ethical hacking, Kali Linux, and cybersecurity',
         chapters: 5,
         keywords: ['ethical hacking', 'kali linux', 'cybersecurity', 'nmap', 'xss'],
-        downloadUrl: `${this.basePath}james-web-logical.pdf`,
-        previewUrl: `${this.basePath}james-web-logical-preview.pdf`
+        downloadUrl: `${this.basePath}logical.pdf`,
+        previewUrl: `${this.basePath}logical.pdf`
       }
     ];
 
@@ -120,48 +121,6 @@ class PDFManager {
     }
     
     localStorage.setItem(key, JSON.stringify(analytics));
-  }
-
-  /**
-   * Load cached PDF metadata
-   */
-  loadCachedMetadata() {
-    const cached = localStorage.getItem(this.cacheKey);
-    if (cached) {
-      try {
-        const data = JSON.parse(cached);
-        // Verify cache is not stale (older than 7 days)
-        const cacheAge = Date.now() - data.timestamp;
-        if (cacheAge < 7 * 24 * 60 * 60 * 1000) {
-          console.log('[PDFManager] Using cached metadata');
-          return;
-        }
-      } catch (e) {
-        console.warn('[PDFManager] Cache parse error:', e);
-      }
-    }
-    
-    // Refresh metadata
-    this.refreshMetadata();
-  }
-
-  /**
-   * Refresh PDF metadata from server
-   */
-  async refreshMetadata() {
-    try {
-      const response = await fetch('/api/pdf-metadata');
-      if (response.ok) {
-        const data = await response.json();
-        localStorage.setItem(this.cacheKey, JSON.stringify({
-          data: data,
-          timestamp: Date.now()
-        }));
-        console.log('[PDFManager] Metadata refreshed');
-      }
-    } catch (e) {
-      console.warn('[PDFManager] Could not refresh metadata:', e);
-    }
   }
 
   /**

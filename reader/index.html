@@ -16,12 +16,12 @@
     <meta property="og:description" content="A distraction-free environment for mastering cybersecurity through the James Series library.">
     <meta property="og:site_name" content="James Web Portal">
     <meta property="og:url" content="https://jamesweb.dpdns.org/reader/">
-    <meta property="og:image" content="https://jamesweb.dpdns.org/assets/images/logo.svg">
+    <meta property="og:image" content="https://jamesweb.dpdns.org/assets/images/icon-512.png">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="James Web Immersive Reader">
     <meta name="twitter:description" content="A distraction-free environment for mastering cybersecurity through the James Series library.">
-    <meta name="twitter:image" content="https://jamesweb.dpdns.org/assets/images/logo.svg">
+    <meta name="twitter:image" content="https://jamesweb.dpdns.org/assets/images/icon-512.png">
 
     <script type="application/ld+json">
     {
@@ -36,6 +36,7 @@
     <meta name="geo.region" content="IN-BR">
     <meta name="geo.placename" content="Muzaffarpur, Bihar, India">
     <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+    <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
     <link rel="manifest" href="../manifest.json">
     <script src="../assets/js/seo-engine.js" defer></script>
 
@@ -1406,8 +1407,8 @@
         // Ignore when typing in inputs
         const tag = document.activeElement.tagName;
         if (tag === 'INPUT' || tag === 'TEXTAREA') {
-            // But allow Ctrl+F in reader
-            if (e.ctrlKey && e.key === 'f' && document.getElementById('reader-root').style.display === 'flex') {
+            // But allow Ctrl+F / Cmd+F in reader
+            if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'f' && document.getElementById('reader-root').style.display === 'flex') {
                 e.preventDefault();
                 if (!searchOpen) toggleSearch();
                 return;
@@ -1418,6 +1419,19 @@
         // Only in reader mode
         if (document.getElementById('reader-root').style.display !== 'flex') return;
 
+        // Ctrl+F / Cmd+F must open search only — handled here, before the
+        // plain-key switch below, so it can't also fire the bare "f"
+        // fullscreen shortcut at the same time.
+        if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'f') {
+            e.preventDefault();
+            if (!searchOpen) toggleSearch();
+            return;
+        }
+
+        // Ignore any other Ctrl/Cmd-modified keys so they don't collide
+        // with the single-key shortcuts below (browser shortcuts, etc.)
+        if (e.ctrlKey || e.metaKey) return;
+
         switch (e.key) {
             case 'ArrowRight': case 'PageDown': nextPage(); break;
             case 'ArrowLeft': case 'PageUp': prevPage(); break;
@@ -1427,11 +1441,6 @@
             case 'b': case 'B': toggleBookmark(); break;
             case 's': case 'S': toggleSidebar(); break;
             case '?': toggleKeyboardHelp(); break;
-        }
-
-        if (e.ctrlKey && e.key === 'f') {
-            e.preventDefault();
-            if (!searchOpen) toggleSearch();
         }
     });
 
