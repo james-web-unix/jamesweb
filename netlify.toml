@@ -1,56 +1,17 @@
-# Netlify Configuration for James Web Portal
-# https://docs.netlify.com/configure-builds/file-conventions/
+# Netlify configuration for James Web
+# Redirects live ONLY in the _redirects file, so the two files can never disagree.
 
 [build]
   publish = "."
 
-# Redirects & Rewrites
-[[redirects]]
-  from = "https://jamesweblogical.netlify.app/*"
-  to = "https://jamesweb.dpdns.org/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "http://jamesweblogical.netlify.app/*"
-  to = "https://jamesweb.dpdns.org/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/logical"
-  to = "/logical/"
-  status = 301
-
-[[redirects]]
-  from = "/learning"
-  to = "/learning/"
-  status = 301
-
-[[redirects]]
-  from = "/index.html"
-  to = "/"
-  status = 301
-
-[[redirects]]
-  from = "/books/*"
-  to = "/books-library/:splat"
-  status = 200
-
-[[redirects]]
-  from = "/assets/pdf/*"
-  to = "/books-library/:splat"
-  status = 200
-
-# Headers for SEO & Performance
 [[headers]]
   for = "/*"
   [headers.values]
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "SAMEORIGIN"
-    X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000"
 
 [[headers]]
   for = "*.html"
@@ -63,13 +24,13 @@
   [headers.values]
     Content-Type = "application/pdf"
     Content-Disposition = "inline"
-    Cache-Control = "public, max-age=604800, immutable"
+    Cache-Control = "public, max-age=604800"
 
 [[headers]]
   for = "*.js"
   [headers.values]
     Content-Type = "application/javascript"
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=86400, must-revalidate"
 
 [[headers]]
   for = "/sw.js"
@@ -81,20 +42,30 @@
   for = "*.css"
   [headers.values]
     Content-Type = "text/css"
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=86400, must-revalidate"
 
 [[headers]]
   for = "*.svg"
   [headers.values]
     Content-Type = "image/svg+xml"
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=604800"
 
 [[headers]]
   for = "*.jpg"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=604800"
 
 [[headers]]
   for = "*.png"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+
+[[headers]]
+  for = "/.well-known/security.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"

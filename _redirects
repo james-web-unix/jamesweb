@@ -1,15 +1,25 @@
-# OLD NETLIFY DOMAIN → NEW PRIMARY DOMAIN
+# OLD NETLIFY DOMAIN -> NEW PRIMARY DOMAIN (the only old domain is james-web-unix.netlify.app)
 https://james-web-unix.netlify.app/* https://jamesweb.dpdns.org/:splat 301!
-
-# HTTP → HTTPS
 http://james-web-unix.netlify.app/* https://jamesweb.dpdns.org/:splat 301!
+
+# HTTP -> HTTPS
 http://jamesweb.dpdns.org/* https://jamesweb.dpdns.org/:splat 301!
 
-# CANONICAL INTERNAL ROUTES
+# ONE URL PER PAGE (trailing-slash canonical, no /index.html duplicates)
+/index.html / 301!
 /logical /logical/ 301
+/logical/index.html /logical/ 301!
 /learning /learning/ 301
-/index.html / 301
+/learning/index.html /learning/ 301!
+/reader /reader/ 301
+/reader/index.html /reader/ 301!
+/about /about/ 301
+/ethics /ethics/ 301
+/contact /contact/ 301
+/privacy /privacy/ 301
+/disclaimer /disclaimer/ 301
+/corrections /corrections/ 301
 
-# PDF / BOOK COMPATIBILITY
+# PDF / BOOK COMPATIBILITY (internal rewrites, the visible URL does not change)
 /assets/pdf/* /books-library/:splat 200
 /books/* /books-library/:splat 200

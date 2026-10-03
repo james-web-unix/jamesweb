@@ -1,7 +1,7 @@
 {
   "name": "James Web Portal",
   "short_name": "James Web",
-  "description": "Ethical Hacking Guide by AR. Abhinav Ranjan",
+  "description": "Free legal ethical-hacking education from the James Series, a Luminary Technicals division.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -34,5 +34,20 @@
     }
   ],
   "orientation": "portrait-primary",
-  "categories": ["education", "security"]
+  "categories": [
+    "education",
+    "security"
+  ],
+  "id": "/",
+  "lang": "en-IN",
+  "shortcuts": [
+    {
+      "name": "Read James Web Logical",
+      "url": "/reader/?logical"
+    },
+    {
+      "name": "Ethics & Responsible Use",
+      "url": "/ethics/"
+    }
+  ]
 }

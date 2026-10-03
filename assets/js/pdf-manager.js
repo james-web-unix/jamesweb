@@ -37,7 +37,6 @@ class PDFManager {
         size: '4.8 MB',
         published: '2026-05-01',
         version: '1.0',
-        isbn: '978-81-LUMINARY-01',
         description: 'A comprehensive 24-page guide to ethical hacking, Kali Linux, and cybersecurity',
         chapters: 5,
         keywords: ['ethical hacking', 'kali linux', 'cybersecurity', 'nmap', 'xss'],
@@ -187,7 +186,6 @@ class PDFManager {
         name: 'Luminary Books'
       },
       numberOfPages: 24, // Accurate page count
-      isbn: '978-81-LUMINARY-01',
       url: 'https://jamesweb.dpdns.org/logical/'
     };
   }

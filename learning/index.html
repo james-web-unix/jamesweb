@@ -14,50 +14,347 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Learning Portal — All Courses | James Web">
   <meta property="og:description" content="Browse every course in the James Series learning portal, starting with James Web Logical. New courses are added regularly.">
-  <meta property="og:site_name" content="James Web Portal">
+  <meta property="og:site_name" content="James Web">
   <meta property="og:url" content="https://jamesweb.dpdns.org/learning/">
-  <meta property="og:image" content="https://jamesweb.dpdns.org/assets/images/icon-512.png">
+  <meta property="og:image" content="https://jamesweb.dpdns.org/assets/images/og-image.jpg">
+  <meta property="og:image:secure_url" content="https://jamesweb.dpdns.org/assets/images/og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:image:alt" content="James Web Learning Portal">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Learning Portal — All Courses | James Web">
   <meta name="twitter:description" content="Browse every course in the James Series learning portal, starting with James Web Logical. New courses are added regularly.">
-  <meta name="twitter:image" content="https://jamesweb.dpdns.org/assets/images/icon-512.png">
+  <meta name="twitter:image" content="https://jamesweb.dpdns.org/assets/images/og-image.jpg">
 
-  <!-- AEO: Structured Data — this list is rendered from COURSES[] below,
-       so keep this ItemList in sync whenever a course is added. -->
+  <!-- AEO: Structured Data — kept in sync with COURSES[] below -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "James Web", "item": "https://jamesweb.dpdns.org/" },
-          { "@type": "ListItem", "position": 2, "name": "Learning Portal", "item": "https://jamesweb.dpdns.org/learning/" }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://jamesweb.dpdns.org/#website",
+      "url": "https://jamesweb.dpdns.org/",
+      "name": "James Web",
+      "alternateName": [
+        "James Web Portal",
+        "James Series",
+        "jamesweb.dpdns.org"
+      ],
+      "description": "Free cybersecurity and legal ethical-hacking education from the James Series.",
+      "disambiguatingDescription": "James Web is an independent cybersecurity and ethical hacking education division of Luminary Technicals. It is not affiliated with NASA, ESA, CSA, or the James Webb Space Telescope (JWST).",
+      "inLanguage": "en-IN",
+      "publisher": {
+        "@id": "https://jamesweb.dpdns.org/#james-web"
+      },
+      "creator": {
+        "@id": "https://jamesweb.dpdns.org/#person"
+      }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://jamesweb.dpdns.org/learning/#webpage",
+      "url": "https://jamesweb.dpdns.org/learning/",
+      "name": "Learning Portal — All Courses | James Web",
+      "description": "Every course in the James Series learning portal, starting with James Web Logical.",
+      "inLanguage": "en-IN",
+      "isPartOf": {
+        "@id": "https://jamesweb.dpdns.org/#website"
+      },
+      "about": {
+        "@id": "https://jamesweb.dpdns.org/#james-web"
+      },
+      "author": {
+        "@id": "https://jamesweb.dpdns.org/#person"
+      },
+      "publisher": {
+        "@id": "https://jamesweb.dpdns.org/#james-web"
+      },
+      "dateModified": "2026-10-03",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://jamesweb.dpdns.org/assets/images/icon-512.png"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".speakable"
         ]
       },
-      {
-        "@type": "ItemList",
-        "name": "James Web Learning Portal — Courses",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "James Web Logical",
-            "url": "https://jamesweb.dpdns.org/logical/"
-          }
-        ]
+      "breadcrumb": {
+        "@id": "https://jamesweb.dpdns.org/learning/#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://jamesweb.dpdns.org/learning/#courses"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "James Web",
+          "item": "https://jamesweb.dpdns.org/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Learning Portal",
+          "item": "https://jamesweb.dpdns.org/learning/"
+        }
+      ],
+      "@id": "https://jamesweb.dpdns.org/learning/#breadcrumb"
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://jamesweb.dpdns.org/learning/#courses",
+      "name": "James Web Learning Portal — Courses",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "James Web Logical",
+          "url": "https://jamesweb.dpdns.org/logical/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://jamesweb.dpdns.org/#organization",
+      "name": "Luminary Technicals",
+      "url": "https://luminarytechnicals.dpdns.org",
+      "founder": {
+        "@id": "https://jamesweb.dpdns.org/#person"
+      },
+      "department": [
+        {
+          "@id": "https://jamesweb.dpdns.org/#james-web"
+        },
+        {
+          "@id": "https://jamesweb.dpdns.org/#luminary-books"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://jamesweb.dpdns.org/#james-web",
+      "name": "James Web",
+      "alternateName": [
+        "James Web Portal",
+        "James Series"
+      ],
+      "url": "https://jamesweb.dpdns.org/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://jamesweb.dpdns.org/assets/images/icon-512.png",
+        "width": 512,
+        "height": 512
+      },
+      "description": "James Web is a division of Luminary Technicals focused on legal ethical-hacking learning and research. It publishes the James Series of books and a free online reader.",
+      "disambiguatingDescription": "James Web is an independent cybersecurity and ethical hacking education division of Luminary Technicals. It is not affiliated with NASA, ESA, CSA, or the James Webb Space Telescope (JWST).",
+      "parentOrganization": {
+        "@id": "https://jamesweb.dpdns.org/#organization"
+      },
+      "founder": {
+        "@id": "https://jamesweb.dpdns.org/#person"
+      },
+      "slogan": "Learn. Practice. Protect.",
+      "knowsAbout": [
+        "Ethical hacking",
+        "Network security",
+        "Web security",
+        "Cybersecurity education",
+        "Digital logic",
+        "Legal practice labs"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://jamesweb.dpdns.org/#luminary-books",
+      "name": "Luminary Books",
+      "description": "The publishing imprint of Luminary Technicals. It publishes the James Series.",
+      "parentOrganization": {
+        "@id": "https://jamesweb.dpdns.org/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://jamesweb.dpdns.org/#person",
+      "name": "AR. Abhinav Ranjan",
+      "alternateName": "Abhinav Ranjan",
+      "url": "https://abhinavranjan.netlify.app",
+      "image": "https://abhinavranjan.qzz.io/images/profile.png",
+      "jobTitle": "Cybersecurity Educator and Founder, Luminary Technicals",
+      "description": "Cybersecurity educator from India and founder of Luminary Technicals, the organization behind James Web. Author of James Web Logical.",
+      "nationality": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "worksFor": {
+        "@id": "https://jamesweb.dpdns.org/#organization"
+      },
+      "sameAs": [
+        "https://abhinavranjan.qzz.io",
+        "https://twitter.com/abhinavranjan",
+        "https://luminarytechnicals.dpdns.org"
+      ],
+      "knowsAbout": [
+        "Ethical hacking",
+        "Network security",
+        "Cybersecurity education"
+      ]
+    },
+    {
+      "@type": "Book",
+      "@id": "https://jamesweb.dpdns.org/logical/#book",
+      "name": "James Web Logical",
+      "alternateName": "James Web Logical: A Complete Guide to Ethical Hacking, Tools, Security & Logical Thinking",
+      "url": "https://jamesweb.dpdns.org/logical/",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://jamesweb.dpdns.org/assets/images/james-web-logical-book.jpg",
+        "width": 440,
+        "height": 604,
+        "caption": "Cover of James Web Logical by AR. Abhinav Ranjan"
+      },
+      "thumbnailUrl": "https://jamesweb.dpdns.org/assets/images/james-web-logical-book.jpg",
+      "description": "A 24-page, permission-first guide to ethical hacking: Kali Linux setup, Nmap reconnaissance, XSS from a defender's view and building a legal practice lab.",
+      "author": {
+        "@id": "https://jamesweb.dpdns.org/#person"
+      },
+      "publisher": {
+        "@id": "https://jamesweb.dpdns.org/#luminary-books"
+      },
+      "copyrightHolder": {
+        "@id": "https://jamesweb.dpdns.org/#person"
+      },
+      "isPartOf": {
+        "@type": "BookSeries",
+        "name": "The James Series",
+        "publisher": {
+          "@id": "https://jamesweb.dpdns.org/#james-web"
+        }
+      },
+      "datePublished": "2026-05-01",
+      "bookEdition": "First Edition",
+      "copyrightYear": 2026,
+      "inLanguage": "en",
+      "numberOfPages": 24,
+      "genre": [
+        "Cybersecurity",
+        "Ethical Hacking",
+        "Technology Education"
+      ],
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Ethical hacking"
+        },
+        {
+          "@type": "Thing",
+          "name": "Kali Linux"
+        },
+        {
+          "@type": "Thing",
+          "name": "Nmap network reconnaissance"
+        },
+        {
+          "@type": "Thing",
+          "name": "Cross-Site Scripting (XSS)"
+        },
+        {
+          "@type": "Thing",
+          "name": "Legal practice labs"
+        }
+      ],
+      "keywords": "ethical hacking, Kali Linux, Nmap, XSS, cybersecurity, legal practice lab, permission-first",
+      "educationalLevel": "Beginner to Intermediate",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Cybersecurity students, IT learners and developers"
+      },
+      "workExample": [
+        {
+          "@type": "Book",
+          "@id": "https://jamesweb.dpdns.org/logical/#online-edition",
+          "bookFormat": "https://schema.org/EBook",
+          "name": "James Web Logical (online edition)",
+          "url": "https://jamesweb.dpdns.org/reader/?logical",
+          "inLanguage": "en",
+          "isAccessibleForFree": true,
+          "potentialAction": {
+            "@type": "ReadAction",
+            "target": "https://jamesweb.dpdns.org/reader/?logical"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock",
+            "eligibleRegion": {
+              "@type": "Country",
+              "name": "India"
+            },
+            "url": "https://jamesweb.dpdns.org/reader/?logical"
+          }
+        },
+        {
+          "@type": "Book",
+          "@id": "https://jamesweb.dpdns.org/logical/#kindle-edition",
+          "bookFormat": "https://schema.org/EBook",
+          "name": "James Web Logical (Kindle edition)",
+          "url": "https://www.amazon.in/James-Web-Logical-Security-Simplified-ebook/dp/B0GYG67XF5",
+          "inLanguage": "en",
+          "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "ASIN",
+            "value": "B0GYG67XF5"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "3.00",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.amazon.in/James-Web-Logical-Security-Simplified-ebook/dp/B0GYG67XF5",
+            "seller": {
+              "@type": "Organization",
+              "name": "Amazon Kindle Store"
+            }
+          }
+        },
+        {
+          "@type": "Book",
+          "@id": "https://jamesweb.dpdns.org/logical/#google-play-edition",
+          "bookFormat": "https://schema.org/EBook",
+          "name": "James Web Logical (Google Play Books edition)",
+          "url": "https://play.google.com/store/books/details/Abhinav_Ranjan_James_Web_Logical?id=-9XVEQAAQBAJ&hl=en_IN",
+          "inLanguage": "en",
+          "offers": {
+            "@type": "Offer",
+            "price": "3.00",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://play.google.com/store/books/details/Abhinav_Ranjan_James_Web_Logical?id=-9XVEQAAQBAJ&hl=en_IN",
+            "seller": {
+              "@type": "Organization",
+              "name": "Google Play Books"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <meta name="geo.region" content="IN-BR">
-  <meta name="geo.placename" content="Muzaffarpur, Bihar, India">
+  <meta name="geo.placename" content="Bihar, India">
   <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
   <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
   <link rel="manifest" href="../manifest.json">
-  <script src="../assets/js/seo-engine.js" defer></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -185,6 +482,11 @@
     .course-card-add p { font-size: 0.82rem; color: var(--text-dim); max-width: 220px; line-height: 1.5; }
 
     #empty-state { text-align: center; color: var(--text-dim); padding: 60px 0; display: none; }
+    .site-foot { text-align: center; padding: 40px 20px 60px; font-size: 0.85rem; color: #8a8ba0; }
+  .site-foot a { color: #a0a0b0; text-decoration: none; }
+  .site-foot a:hover { color: #fff; }
+  .site-foot p { margin-top: 10px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid #3b82f6; outline-offset: 3px; }
   </style>
 </head>
 <body>
@@ -192,10 +494,10 @@
   <div class="bg-grid" aria-hidden="true"></div>
 
   <header class="top-bar">
-    <a href="../index.html" class="back-link">
+    <a href="/" class="back-link">
       <i class="fa-solid fa-arrow-left"></i> Home
     </a>
-    <a href="../reader/index.html" class="nav-cta">Open Reader</a>
+    <a href="/reader/" class="nav-cta">Open Reader</a>
   </header>
 
   <main>
@@ -208,6 +510,8 @@
     <div class="course-grid" id="course-grid" role="list"></div>
     <p id="empty-state">No courses match your search.</p>
   </main>
+
+  <footer class="site-foot"><nav aria-label="Footer"><a href="/about/">About</a> &middot; <a href="/ethics/">Ethics &amp; Responsible Use</a> &middot; <a href="/contact/">Contact</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/disclaimer/">Disclaimer</a> &middot; <a href="/corrections/">Corrections</a></nav><p>&copy; 2026 James Web, a division of <a href="https://luminarytechnicals.dpdns.org">Luminary Technicals</a>.</p></footer>
 
   <script>
     // ════════════════════════════════════════════════════════════
@@ -225,7 +529,7 @@
         gradient: 'linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%)',
         tags: ['Ethical Hacking', 'Kali Linux', 'Beginner'],
         pages: 24,
-        href: '../logical/index.html'
+        href: '/logical/'
       }
       // ← Add more courses here as new books/courses launch.
     ];
@@ -268,7 +572,7 @@
       addCard.className = 'course-card-add';
       addCard.innerHTML = `
         <i class="fa-solid fa-book-medical"></i>
-        <p>More courses are on the way. Check back soon.</p>
+        <p><strong>James Web Onion Mode</strong><br>Coming soon. The next book in the James Series.</p>
       `;
       grid.appendChild(addCard);
     }

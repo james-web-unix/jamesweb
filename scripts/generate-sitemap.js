@@ -1,53 +1,40 @@
 /**
- * Simple Sitemap Generator for Node.js
- * Run this command to generate sitemap: node scripts/generate-sitemap.js
+ * Sitemap generator — the ONLY sitemap script (the old root generate-sitemap.js was removed).
+ * Run:  node scripts/generate-sitemap.js            (uses today's date)
+ *       LASTMOD=2026-10-03 node scripts/generate-sitemap.js
+ * Edit PAGES below when you add a page, then re-run and redeploy.
  */
-
 const fs = require('fs');
 const path = require('path');
 
-// Base configuration
-const BASE_URL = 'https://jamesweb.dpdns.org'; // Must match canonical URLs used across the site
-const ROOT_DIR = path.resolve(__dirname, '..');
+const BASE = 'https://jamesweb.dpdns.org';
+const LASTMOD = process.env.LASTMOD || new Date().toISOString().slice(0, 10);
 
-// Files to exclude
-const EXCLUDE = ['node_modules', '.git', 'assets', 'scripts', 'books-library',
-  '403.html', '404.html', '500.html', 'offline.html', 'googleaf52be9848c76625.html'];
+const PAGES = [
+  { path: '/' },
+  { path: '/logical/', images: [
+    '/assets/images/og-james-web-logical.jpg',
+    '/assets/images/james-web-logical-book.jpg',
+    '/assets/images/james-web-logical-banner.jpg' ] },
+  { path: '/learning/' },
+  { path: '/reader/' },
+  { path: '/about/' },
+  { path: '/ethics/' },
+  { path: '/contact/' },
+  { path: '/privacy/' },
+  { path: '/disclaimer/' },
+  { path: '/corrections/' }
+];
 
-function walkDir(dir, fileList = []) {
-    const files = fs.readdirSync(dir);
-    files.forEach(file => {
-        const filePath = path.join(dir, file);
-        const stat = fs.statSync(filePath);
-        if (stat.isDirectory()) {
-            if (!EXCLUDE.includes(file)) walkDir(filePath, fileList);
-        } else {
-            if (file.endsWith('.html') && !EXCLUDE.includes(file)) {
-                let relativePath = path.relative(ROOT_DIR, filePath).replace(/\\/g, '/');
-                if (relativePath === 'index.html') {
-                    relativePath = '';
-                } else if (relativePath.endsWith('/index.html')) {
-                    // Match the clean, trailing-slash canonical URLs used
-                    // across the site (e.g. /logical/, not /logical/index.html)
-                    relativePath = relativePath.slice(0, -'index.html'.length);
-                }
-                fileList.push(relativePath);
-            }
-        }
-    });
-    return fileList;
-}
-
-const pages = walkDir(ROOT_DIR);
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
-    <loc>${BASE_URL}/${page}</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>${page === '' ? '1.0' : '0.8'}</priority>
+const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+${PAGES.map(p => `  <url>
+    <loc>${BASE}${p.path}</loc>
+    <lastmod>${LASTMOD}</lastmod>${(p.images || []).map(i => `
+    <image:image><image:loc>${BASE}${i}</image:loc></image:image>`).join('')}
   </url>`).join('\n')}
-</urlset>`;
+</urlset>
+`;
 
-fs.writeFileSync(path.join(ROOT_DIR, 'sitemap.xml'), sitemap);
-console.log('Sitemap.xml generated successfully!');
+fs.writeFileSync(path.resolve(__dirname, '..', 'sitemap.xml'), xml);
+console.log('sitemap.xml written for ' + PAGES.length + ' pages, lastmod ' + LASTMOD);

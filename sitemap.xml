@@ -1,27 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://jamesweb.dpdns.org/</loc>
-    <lastmod>2026-09-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://jamesweb.dpdns.org/learning/</loc>
-    <lastmod>2026-09-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-03</lastmod>
+    <image:image>
+      <image:loc>https://jamesweb.dpdns.org/assets/images/og-image.jpg</image:loc>
+      <image:title>James Web Portal — Ethical Hacking &amp; Cybersecurity Guide Banner</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jamesweb.dpdns.org/assets/images/logo.svg</image:loc>
+      <image:title>James Web Official Logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jamesweb.dpdns.org/assets/images/icon-512.png</image:loc>
+      <image:title>James Web Portal Brand Icon</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://jamesweb.dpdns.org/logical/</loc>
-    <lastmod>2026-09-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-03</lastmod>
+    <image:image>
+      <image:loc>https://jamesweb.dpdns.org/assets/images/og-james-web-logical.jpg</image:loc>
+      <image:title>James Web Logical Book Open Graph Banner</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jamesweb.dpdns.org/assets/images/james-web-logical-book.jpg</image:loc>
+      <image:title>James Web Logical Book Cover (First Edition 2026)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jamesweb.dpdns.org/assets/images/james-web-logical-banner.jpg</image:loc>
+      <image:title>James Web Logical Header Banner</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jamesweb.dpdns.org/books-library/logical.pdf</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url>
+  <url>
+    <loc>https://jamesweb.dpdns.org/learning/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <image:image>
+      <image:loc>https://jamesweb.dpdns.org/assets/images/og-image.jpg</image:loc>
+      <image:title>James Web Learning Portal</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://jamesweb.dpdns.org/reader/</loc>
-    <lastmod>2026-09-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-03</lastmod>
+    <image:image>
+      <image:loc>https://jamesweb.dpdns.org/assets/images/og-image.jpg</image:loc>
+      <image:title>James Web Immersive Reader</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://jamesweb.dpdns.org/assets/images/james-web-logical-book.jpg</image:loc>
+      <image:title>James Web Logical Reader Volume</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://jamesweb.dpdns.org/about/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url>
+  <url>
+    <loc>https://jamesweb.dpdns.org/ethics/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url>
+  <url>
+    <loc>https://jamesweb.dpdns.org/contact/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url>
+  <url>
+    <loc>https://jamesweb.dpdns.org/privacy/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url>
+  <url>
+    <loc>https://jamesweb.dpdns.org/disclaimer/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url>
+  <url>
+    <loc>https://jamesweb.dpdns.org/corrections/</loc>
+    <lastmod>2026-10-03</lastmod>
   </url>
 </urlset>

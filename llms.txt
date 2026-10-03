@@ -1,0 +1,37 @@
+# James Web
+
+> James Web is a division of Luminary Technicals, founded by AR. Abhinav Ranjan, focused on legal hacking learning and research. It publishes the James Series of cybersecurity books and a free online reader. Teaching follows a permission-first model: test only systems you own or have explicit authorization to test.
+
+James Web is not affiliated with NASA, ESA, CSA or the James Webb Space Telescope (JWST). The similar name is a coincidence.
+
+## Key facts
+- Site: https://jamesweb.dpdns.org/
+- Parent organization: Luminary Technicals (https://luminarytechnicals.dpdns.org)
+- Publisher imprint: Luminary Books
+- Founder and author: AR. Abhinav Ranjan
+- Topics: ethical hacking, network security, web security (XSS from a defender's view), Kali Linux, Nmap, digital logic, legal practice labs
+- Language: English (India)
+
+## Books
+- James Web Logical: A Complete Guide to Ethical Hacking, Tools, Security & Logical Thinking. First Edition, 2026, 24 pages, five chapters plus an introduction. Free to read online in India; $3 USD on Amazon Kindle and Google Play Books worldwide. Page: https://jamesweb.dpdns.org/logical/
+- James Web Onion Mode: upcoming, not yet released. No details have been published.
+
+## Pages
+- [Home](https://jamesweb.dpdns.org/): overview of the James Series
+- [James Web Logical](https://jamesweb.dpdns.org/logical/): chapters, Legal Lab Checklist, pricing and FAQ
+- [Learning Portal](https://jamesweb.dpdns.org/learning/): list of courses
+- [Immersive Reader](https://jamesweb.dpdns.org/reader/): free online reader
+- [About](https://jamesweb.dpdns.org/about/): who runs James Web and how the organization fits together
+- [Ethics & Responsible Use](https://jamesweb.dpdns.org/ethics/): the permission-first rules and the five-check Legal Lab Checklist
+- [Contact](https://jamesweb.dpdns.org/contact/): how to reach James Web
+- [Privacy](https://jamesweb.dpdns.org/privacy/): what the site stores and loads
+- [Disclaimer](https://jamesweb.dpdns.org/disclaimer/): education-only use, trademarks, external links
+- [Corrections](https://jamesweb.dpdns.org/corrections/): corrections policy and dated change log
+
+## Buy or read
+- Online edition: https://jamesweb.dpdns.org/reader/?logical
+- Amazon Kindle: https://www.amazon.in/James-Web-Logical-Security-Simplified-ebook/dp/B0GYG67XF5
+- Google Play Books: https://play.google.com/store/books/details/Abhinav_Ranjan_James_Web_Logical?id=-9XVEQAAQBAJ&hl=en_IN
+
+## Citing
+Cite as: AR. Abhinav Ranjan, James Web Logical (Luminary Books, First Edition, 2026), https://jamesweb.dpdns.org/logical/
